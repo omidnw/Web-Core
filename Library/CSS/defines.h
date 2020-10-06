@@ -83,7 +83,6 @@ char* CreateFileCss(char FileName[100], char FileType[10])
     else
     {
         printf("Error Cannot Create a StyleSheet File!");
-        getch();
         return "";
     }
 }
