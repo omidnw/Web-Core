@@ -1,1 +1,1 @@
-redirect_to = "introduction"
+redirect_to = "content"
