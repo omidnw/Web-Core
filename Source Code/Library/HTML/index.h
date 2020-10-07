@@ -12,7 +12,7 @@ int index_html()
     bodys(HomePage, "");
     h1(HomePage, "This WebSite Created By Web Core!");
     divs(HomePage, True,True,"container");
-    atags(HomePage, "Click Here For Redirect To Web Core Repository!", "https://github.com/omidnw/Web-Core", "_blank", True,
+    atags(HomePage, "Click Here To Redirect To Web Core Repository!", "https://github.com/omidnw/Web-Core", "_blank", True,
            True, True, True, True, True, True, True, True, True);
     atags(HomePage, "Click Here For Source Code!", "https://github.com/omidnw/Web-Core/tree/gh-pages/Source-Code", "_blank", True,
            True, True, True, True, True, True, True, True, True);
