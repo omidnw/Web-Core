@@ -10,7 +10,7 @@ int index_html()
     heade(HomePage);
 
     bodys(HomePage, "");
-    h1(HomePage, "This WebSite Created By Web Core!");
+    h1(HomePage, "This WebSite Is Created By Web Core!");
     divs(HomePage, True,True,"container");
     atags(HomePage, "Click Here To Redirect To Web Core Repository!", "https://github.com/omidnw/Web-Core", "_blank", True,
            True, True, True, True, True, True, True, True, True);
