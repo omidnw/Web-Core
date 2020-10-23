@@ -1,3 +1,4 @@
+#include "structure.h"
 #include "../../Config/defines.h"
 void htmltagstart(char* FilEName_Type, char lang[2], char xml[100])
 {
@@ -51,4 +52,12 @@ void htmltagend(char* FilEName_Type)
         memmove(&FilEName_Type[idxToDel], &FilEName_Type[idxToDel + 1], strlen(FilEName_Type) - idxToDel);
     }
     printf("%s Created and Edited! & Finish Process!\n", FilEName_Type);
+}
+void htmls(char* FilEName_Type, char lang[2], char xml[100])
+{
+    htmltagstart(FilEName_Type, lang, xml);
+}
+void htmle(char* FilEName_Type)
+{
+    htmltagend(FilEName_Type);
 }

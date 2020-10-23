@@ -1,4 +1,4 @@
-// start head tag!
+#include "headstructure.h"
 #include "../../../Config/defines.h"
 
 void htmlheadstart(char* FilEName_Type)
@@ -28,11 +28,22 @@ void htmltagtitle(char* FilEName_Type, char title[100])
     }
     fclose(fp);
 }
-// end head tag!
 void htmlheadend(char* FilEName_Type)
 {
     FILE *fp;
     fp = fopen(FilEName_Type, "a+");
     fprintf(fp, "</head>\n");
     fclose(fp);
+}
+void heads(char* FilEName_Type)
+{
+    htmlheadstart(FilEName_Type);
+}
+void title(char* FilEName_Type, char title[100])
+{
+    htmltagtitle(FilEName_Type, title);
+}
+void heade(char* FilEName_Type)
+{
+    htmlheadend(FilEName_Type);
 }

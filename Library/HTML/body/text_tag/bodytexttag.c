@@ -1,4 +1,6 @@
+#include "bodytexttag.h"
 #include "../../../Config/defines.h"
+
 void htmlatagstart(char* FilEName_Type, char value[1000], char href[255], char target[255], char style[255], char download[255], char hreflang[255], char media[255], char ping[255], char referrerpolicy[255], char rel[255], char type[255], int endcondition)
 {
     FILE *fp;
@@ -180,7 +182,7 @@ void htmlatagend(char* FilEName_Type)
     fprintf(fp, "</a>\n");
     fclose(fp);
 }
-void htmlptagstart(char* arguments[])// char* FileName, 
+/*void htmlptagstart(char* arguments[])// char* FileName, 
 {
     FILE *fp;
     //fp = fopen(FileName, "a+");
@@ -188,7 +190,7 @@ void htmlptagstart(char* arguments[])// char* FileName,
     printf("\n%d\n", sizeof(arguments)/sizeof(*arguments));
     fprintf(fp, "</a>\n");
     fclose(fp);
-}
+}*/
 // h1 to h6 tags
 void htmlh1tag(char* FilEName_Type, char value[1000])
 {
@@ -249,4 +251,42 @@ void htmlh6tag(char* FilEName_Type, char value[1000])
     fp = fopen(FilEName_Type, "a+");
     fprintf(fp, h1tagarray);
     fclose(fp);
+}
+
+
+// h1 to h6 tag!
+void h1(char* FilEName_Type, char value[1000])
+{
+    htmlh1tag(FilEName_Type, value);
+}
+void h2(char* FilEName_Type, char value[1000])
+{
+    htmlh2tag(FilEName_Type, value);
+}
+void h3(char* FilEName_Type, char value[1000])
+{
+    htmlh3tag(FilEName_Type, value);
+}
+void h4(char* FilEName_Type, char value[1000])
+{
+    htmlh4tag(FilEName_Type, value);
+}
+void h5(char* FilEName_Type, char value[1000])
+{
+    htmlh5tag(FilEName_Type, value);
+}
+void h6(char* FilEName_Type, char value[1000])
+{
+    htmlh6tag(FilEName_Type, value);
+}
+
+// a tag!
+void atags(char* FilEName_Type, char value[1000], char href[255], char target[255], char style[255], char download[255], char hreflang[255], char media[255], char ping[255], char referrerpolicy[255], char rel[255], char type[255], int endcondition)
+{
+    htmlatagstart(FilEName_Type, value, href, target, style,
+                  download, hreflang, media, ping, referrerpolicy, rel, type, endcondition);
+}
+void atage(char* FilEName_Type)
+{
+    htmlatagend(FilEName_Type);
 }
